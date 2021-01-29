@@ -1,5 +1,5 @@
 {
-    "name": "keboola/azure-key-vault-client",
+    "name": "one-crm/azure-key-vault-client",
     "license": "MIT",
     "type": "library",
     "description": "Client for Azure Key Vault",
