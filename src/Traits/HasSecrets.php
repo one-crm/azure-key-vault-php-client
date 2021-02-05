@@ -1,6 +1,6 @@
 <?php
 
-namespace OneCRM\KeyVault;
+namespace OneCRM\KeyVault\Traits;
 
 use GuzzleHttp\Psr7\Request;
 use OneCRM\KeyVault\Responses\SecretBundle;
