@@ -1,9 +1,9 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Responses;
+namespace OneCRM\KeyVault\Responses;
 
-use Keboola\AzureKeyVaultClient\Base64UrlEncoder;
-use Keboola\AzureKeyVaultClient\Exception\InvalidResponseException;
+use OneCRM\KeyVault\Base64UrlEncoder;
+use OneCRM\KeyVault\Exception\InvalidResponseException;
 
 class KeyOperationResult
 {

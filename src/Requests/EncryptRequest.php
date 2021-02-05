@@ -1,9 +1,8 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Requests;
+namespace OneCRM\KeyVault\Requests;
 
-use Keboola\AzureKeyVaultClient\Base64UrlEncoder;
-use Keboola\AzureKeyVaultClient\Exception\ClientException;
+use OneCRM\KeyVault\Base64UrlEncoder;
 
 class EncryptRequest extends EncryptDecryptRequest
 {

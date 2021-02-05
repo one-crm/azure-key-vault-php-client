@@ -1,6 +1,6 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Requests;
+namespace OneCRM\KeyVault\Requests;
 
 class SetSecretRequest
 {

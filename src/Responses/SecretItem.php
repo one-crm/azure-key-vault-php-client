@@ -1,9 +1,9 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Responses;
+namespace OneCRM\KeyVault\Responses;
 
-use Keboola\AzureKeyVaultClient\Exception\InvalidResponseException;
-use Keboola\AzureKeyVaultClient\Requests\SecretAttributes;
+use OneCRM\KeyVault\Exception\InvalidResponseException;
+use OneCRM\KeyVault\Requests\SecretAttributes;
 
 class SecretItem
 {

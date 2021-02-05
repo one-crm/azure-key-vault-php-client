@@ -1,8 +1,8 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Responses;
+namespace OneCRM\KeyVault\Responses;
 
-use Keboola\AzureKeyVaultClient\Exception\InvalidResponseException;
+use OneCRM\KeyVault\Exception\InvalidResponseException;
 
 class DeletedSecretBundle extends SecretBundle
 {

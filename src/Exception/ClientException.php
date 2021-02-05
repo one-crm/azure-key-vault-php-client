@@ -1,6 +1,6 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Exception;
+namespace OneCRM\KeyVault\Exception;
 
 use RuntimeException;
 

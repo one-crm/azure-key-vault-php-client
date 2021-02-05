@@ -1,6 +1,6 @@
 <?php
 
-namespace Keboola\AzureKeyVaultClient\Exception;
+namespace OneCRM\KeyVault\Exception;
 
 class InvalidResponseException extends ClientException
 {
