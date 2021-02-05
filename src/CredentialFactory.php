@@ -23,7 +23,7 @@ class CredentialFactory
         $cacheName = "azure.auth.$authMethod";
 
         if ($cached = $this->cache->get($cacheName)) {
-            return $cached['access_token'];
+            return $cached;
         }
 
         $authenticator = 'make' . Str::studly($authMethod) . 'Authenticator';

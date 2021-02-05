@@ -2,7 +2,6 @@
 
 namespace OneCRM\KeyVault;
 
-use OneCRM\KeyVault\CredentialFactory;
 use Illuminate\Support\ServiceProvider;
 
 class KeyVaultServiceProvider extends ServiceProvider
@@ -18,7 +17,7 @@ class KeyVaultServiceProvider extends ServiceProvider
             );
 
             return KeyVaultClient::make(
-                config('keyvault.vault_url'), $credential['access_token'],
+                config('keyvault.vault_url'), $credential['access_token']
             );
         });
     }
