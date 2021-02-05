@@ -18,6 +18,13 @@
             "OneCRM\\KeyVault\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OneCRM\\KeyVault\\KeyVaultServiceProvider"
+            ]
+        }
+    },
     "require": {
         "php": "^7.3",
         "guzzlehttp/guzzle": "^6.5",
