@@ -21,7 +21,7 @@ trait HasSecrets
             'PUT',
             sprintf('secrets/%s?api-version=%s', $secretName, self::API_VERSION),
             [],
-            json_encode($setSecretRequest->getArray()
+            json_encode($setSecretRequest->getArray())
         );
         return new SecretBundle($this->sendRequest($request));
     }
