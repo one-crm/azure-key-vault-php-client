@@ -27,7 +27,7 @@
     },
     "require": {
         "php": "^7.3",
-        "guzzlehttp/guzzle": "^6.5",
+        "guzzlehttp/guzzle": "^7.2",
         "illuminate/support": "^8.0"
     }
 }

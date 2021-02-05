@@ -50,7 +50,7 @@ class KeyVaultClient
     private function sendRequest(Request $request)
     {
         try {
-            $response = $this->guzzle->send($request);
+            $response = $this->client->send($request);
             return json_decode($response->getBody()->getContents(), true);
         } catch (GuzzleException $e) {
             $this->handleRequestException($e);

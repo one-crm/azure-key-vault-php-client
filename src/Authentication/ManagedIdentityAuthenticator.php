@@ -38,7 +38,7 @@ class ManagedIdentityAuthenticator implements AuthenticatorInterface
             'resource' => $this->resource
         ]);
 
-        if ($response->failed() || empty($data['access_token'])) {
+        if ($response->failed()) {
             throw new InvalidResponseException(
                 'Access token not provided in response: ' . $response->body()
             );

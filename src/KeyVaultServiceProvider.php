@@ -9,12 +9,12 @@ class KeyVaultServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->bind('azure.credential', CredentialFactory::class);
+        $this->app->bind('azure.auth', CredentialFactory::class);
 
         $this->app->bind('azure.keyvault', function ($app) {
 
-            $credential = $app['azure.credential']->make(
-                config('keyvault.credential') + ['resource' => 'https://keyvault.azure.net']
+            $credential = $app['azure.auth']->make(
+                config('keyvault.credential') + ['resource' => 'https://vault.azure.net']
             );
 
             return KeyVaultClient::make(

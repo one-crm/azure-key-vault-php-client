@@ -4,5 +4,5 @@ namespace OneCRM\KeyVault\Authentication;
 
 interface AuthenticatorInterface
 {
-    public function getAuthenticationToken();
+    public function getAuthenticationPayload();
 }
