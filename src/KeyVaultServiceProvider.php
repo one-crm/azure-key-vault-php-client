@@ -12,6 +12,10 @@ class KeyVaultServiceProvider extends ServiceProvider
 
         $this->app->bind('azure.keyvault', function ($app) {
 
+            if (! $app->isProduction()) {
+                return new FakeKeyVaultClient($app['log']);
+            }
+
             $credential = $app['azure.auth']->make(
                 config('keyvault.credential') + ['resource' => 'https://vault.azure.net']
             );

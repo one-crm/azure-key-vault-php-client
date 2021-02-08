@@ -4,7 +4,6 @@ namespace OneCRM\KeyVault;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;
-use Illuminate\Support\Carbon;
 use Illuminate\Contracts\Cache\Repository as Cache;
 
 class CredentialFactory
@@ -35,7 +34,7 @@ class CredentialFactory
         $auth = $this->{$authenticator}($config)->getAuthenticationPayload();
 
         return tap($auth, function ($auth) use ($cacheName) {
-            $this->cache->put($cacheName, $auth, Carbon::createFromTimestamp($auth['expires_on']));
+            $this->cache->put($cacheName, $auth, ((int) $auth['expires_on'] - time()));
         });
     }
 
