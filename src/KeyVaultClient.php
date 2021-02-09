@@ -14,6 +14,8 @@ class KeyVaultClient
 {
     use Traits\HasSecrets;
 
+    const API_VERSION = '7.1';
+
     protected $client;
 
     protected $vaultUrl;
@@ -41,7 +43,10 @@ class KeyVaultClient
     {
         $client = new Client([
             'base_uri' => $vaultUrl,
-            'headers' => [ 'Authorization' => 'Bearer ' . $accessToken ]
+            'headers' => [
+                'Authorization' => 'Bearer ' . $accessToken,
+                'Content-Type' => 'application/json'
+            ]
         ]);
 
         return new static($client, $vaultUrl, $accessToken);
