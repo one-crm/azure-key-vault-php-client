@@ -11,6 +11,19 @@ use OneCRM\KeyVault\Responses\DeletedSecretBundle;
 trait HasSecrets
 {
     /**
+     * @param string $secretName
+     * @return array
+     */
+    public function getVersions($secretName)
+    {
+        $request = new Request(
+            'GET',
+            sprintf('secrets/%s/versions?api-version=%s', $secretName, self::API_VERSION)
+        );
+        return $this->sendRequest($request);
+    }
+
+    /**
      * @param SetSecretRequest $setSecretRequest
      * @param string $secretName
      * @return SecretBundle

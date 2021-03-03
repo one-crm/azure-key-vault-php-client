@@ -14,6 +14,8 @@ class KeyVaultClient
 {
     use Traits\HasSecrets;
 
+    const DEFAULT_PAGE_SIZE = 10;
+
     const API_VERSION = '7.1';
 
     protected $client;

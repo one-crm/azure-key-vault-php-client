@@ -9,7 +9,7 @@ class ManagedIdentityAuthenticator implements AuthenticatorInterface
 {
     const IDENTITY_METADATA_ENDPOINT = 'http://169.254.169.254/metadata/identity/oauth2/token';
 
-    const API_VERSION = '2019-11-01';
+    const API_VERSION = '2019-08-01';
 
     private $resource;
 
